@@ -37,7 +37,8 @@ def delete_all_tasks():
 def update(id):
      task = Todo.query.get_or_404(id)
      if request.method == "POST":
-        task.task=request.form['task'],
+        task.task=request.form['task']
+        task.date=request.form['date']
         db.session.commit()
         return redirect(url_for("note_list"))
      return render_template('update.html', task=task)

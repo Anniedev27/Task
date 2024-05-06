@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
+    <title>Blog || Home</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #02a95b -100%, #016335 100%);
+      }
+      .contain {
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 5rem;
+        height: 415px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.231);
+      }
+      img {
+        width: 100px;
+        margin-left: 63px;
+      }
+      form {
+        margin: auto;
+        width: 80%;
+      }
+      .btn-primary {
+        margin-top: 40px;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        border: 2px solid green;
+        border-radius: 5px;
+        background-color: #ffffffc1;
+      }
+      p {
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgb(57, 55, 55);
+      }
+      .mt-2 {
+        width: 100%;
+        margin-top: 40px;
+      }
+      .forgot {
+        float: right;
+      }
+      .btn {
+        padding: 15px;
+        border: 2px solid green;
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #016335;
+        background-color: rgba(255, 166, 0, 0.651);
+      }
+      .btn:hover {
+        background-color: orange;
+      }
+      .heading {
+        display: flex;
+        align-items: center;
+      }
+      h5 {
+        font-family: sans-serif;
+        font-size: 21px;
+        margin-left: 21px;
+        font-style: oblique;
+        color: rgba(128, 0, 128, 0.756);
+        animation: blink 0.9s infinite;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .blink {
+        animation: blink 0.9s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contain">
+      <div class="heading">
+        <img src="images/blog_logo.png" alt="" />
+        <h5>Welcome Back User! Sign In To Continue</h5>
+      </div>
+      <form class="was-validated m-6" method="POST">
+        <div class="">
+          <p>Email</p>
+          <input type="email" class="w-75" aria-label="file example" required />
+        </div>
+        <div class="">
+          <p>Password</p>
+          <input
+            type="password"
+            class="w-75"
+            aria-label="file example"
+            required
+          />
+        </div>
+
+        <div class="mt-2">
+          <button class="btn" type="submit">Sing In</button>
+          <button class="btn forgot">Forgot Passord ?</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="js/bootstrap.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</html>
