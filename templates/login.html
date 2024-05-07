@@ -11,105 +11,118 @@
     />
     <title>Blog || Home</title>
     <style>
-      body {
-        background: linear-gradient(90deg, #02a95b -100%, #016335 100%);
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        text-decoration: none;
+      }
+      a {
+        color: #0d6efd;
       }
       .contain {
-        width: 45%;
+        width: 40%;
         margin: 0 auto;
-        margin-top: 5rem;
-        height: 415px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 7rem;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.231);
+        border-radius: 10px;
       }
       img {
         width: 100px;
-        margin-left: 63px;
+        margin-left: 50px;
       }
       form {
         margin: auto;
         width: 80%;
       }
       .btn-primary {
-        margin-top: 40px;
+        margin-top: 20px;
       }
       input {
         width: 100%;
-        height: 30px;
-        border: 2px solid green;
+        height: 32px;
+        border: 1px solid rgba(21, 21, 20, 0.884);
         border-radius: 5px;
         background-color: #ffffffc1;
       }
-      p {
+      form p {
         font-family: sans-serif;
         font-weight: 600;
-        font-size: 20px;
-        color: rgb(57, 55, 55);
+        font-size: 13px;
+        color: rgba(57, 55, 55, 0.591);
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      form span {
+        color: red;
       }
       .mt-2 {
         width: 100%;
-        margin-top: 40px;
-      }
-      .forgot {
-        float: right;
+        margin-top: 30px;
       }
       .btn {
+        width: 100%;
         padding: 15px;
-        border: 2px solid green;
-        border-radius: 10px;
-        font-family: sans-serif;
+        border-radius: 5px;
         font-size: 15px;
         font-weight: 700;
         cursor: pointer;
-        color: #016335;
-        background-color: rgba(255, 166, 0, 0.651);
+        color: #fff;
+        background-color: #5bc142;
+        border: none;
       }
       .btn:hover {
-        background-color: orange;
+        background-color: #229d0a;
       }
+
       .heading {
         display: flex;
         align-items: center;
+        height: 50px;
+        width: 80%;
+        margin: auto;
+        border-bottom: 1px solid grey;
+        margin-bottom: 30px;
       }
-      h5 {
+      .heading h6 {
+        font-size: 20px;
         font-family: sans-serif;
-        font-size: 21px;
-        margin-left: 21px;
-        font-style: oblique;
-        color: rgba(128, 0, 128, 0.756);
-        animation: blink 0.9s infinite;
+        color: rgba(58, 58, 58, 0.842);
       }
-      @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      .blink {
-        animation: blink 0.9s infinite;
+      .heading p {
+        margin-left: 13rem;
+        font-size: 15px;
+        color: grey;
       }
     </style>
   </head>
   <body>
     <div class="contain">
       <div class="heading">
-        <img src="images/blog_logo.png" alt="" />
-        <h5>Welcome Back User! Sign In To Continue</h5>
+        <h6>Login</h6>
+        <p>or <a href="sign-up.html">Create an account</a></p>
       </div>
-      <form class="was-validated m-6" method="POST">
-        <div class="">
-          <p>Email</p>
-          <input type="email" class="w-75" aria-label="file example" required />
+
+      <form action="signup" method="POST" class="was-validated m-6">
+        <div class="mb-1">
+          <p>Email <span>*</span></p>
+          <input
+            type="email"
+            name="email"
+            class="w-75"
+            aria-label="file example"
+            required
+          />
         </div>
-        <div class="">
-          <p>Password</p>
+
+        <div class="mb-1">
+          <p>Password <span>*</span></p>
           <input
             type="password"
+            name="password1"
             class="w-75"
             aria-label="file example"
             required
@@ -117,8 +130,7 @@
         </div>
 
         <div class="mt-2">
-          <button class="btn" type="submit">Sing In</button>
-          <button class="btn forgot">Forgot Passord ?</button>
+          <button class="btn btn-primary" type="submit">Login</button>
         </div>
       </form>
     </div>

@@ -1,11 +1,17 @@
 from models import *
 from flask import render_template, request, redirect, url_for
+from flask_login import login_user, login_required, logout_user, current_user, login_manager, LoginManager
+from models import User
 
-
+login_manager = LoginManager()
 apk = app
+login_manager.init_app(app)
+
 
 @app.route("/note", methods=["GET", "POST"])
+@login_required
 def note_list():
+    #user =  user = User.get_or_404(id)
     if request.method == "POST":
        
             todo = Todo(

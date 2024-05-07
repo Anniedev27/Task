@@ -16,10 +16,19 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
 
 db.init_app(app)
 
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String, unique=True)
+    username = db.Column(db.String, unique=True)
+    password = db.Column(db.String)
+    notes = db.relationship('Todo', backref='user')
+
 class Todo(db.Model):
-    id: Mapped[int] = mapped_column(primary_key=True)
-    task: Mapped[str] = mapped_column(unique=True)
-    date: Mapped[str]
+    id = db.Column(db.Integer, primary_key=True)
+    task = db.Column(db.String)
+    date = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     
 
 with app.app_context():
